@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.input-border-o{
+    padding:3px;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    outline: none;
+}
+
+#header{
+    width: auto;
+    height: auto;
+    background-color: #90cfc4;
+    padding: 30px 20px;
+    overflow:hidden;
+}
+
+#logo{
+    float: left;
+    display: block;
+    width: 164px;
+    height: 70px;
+    background: url("../img/logo.png") no-repeat center center;
+}
+
+#login-form{
+    float: right;
+    text-align: center;
+    width: 17.7%;
+}
+
+.input-group span{
+    width: 30%;
+    text-align: center;
+    float: left;
+}
+
+.input-group{
+    padding: 3px;
+}
+
+.input-group input{
+    float: right;
+    width: 70%;
+    padding: 1px;
+    border: 1px solid  #d5d5d5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;;
+}
+
+#banner{
+    width: auto;
+    height: 300px;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.img-gallery{
+    float: left;
+    width: 55%;
+    height: 90%;
+    border-right: 1px dashed #000;
+}
+
+.news-list{
+    width: 45%;
+    height: 90%;
+    float: right;
+    padding: 10px;
+    text-align: left;
+}
+
+.news-content{
+    border-bottom: 1px dashed #fff;
+    height: 33%;
+}
+
+#forum{
+    width: auto;
+    height: auto;
+	overflow:hidden;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+
+
+.forum-login-form{
+    margin-top: 20px;
+    width: 33%;
+    overflow: hidden;
+    height: auto;
+    border: 1px solid #bcdcd9 ;
+    border-radius: 10px;
+    background-color: #bcdcd9;
+    padding: 20px 0;
+}
+
+.forum-login-form input{
+    width: 75%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.forum-login-form input[type=submit]{
+    width: 100px;
+    background-color: #32a1ad;
+    color: #ffffff;
+}
+
+.forum-login-form input[type=submit]:hover{
+    background-color: #d22e1c;
+}
+
+.forum-login-select{
+    width: 33%;
+    padding: 5px 0;
+    height: 30px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.forum-login-select input {
+    float: left;
+    vertical-align: middle;
+    padding: 3px;
+}
+
+.forum-login-select span {
+    float: left;
+    vertical-align: middle;
+}
+
+.forum-login-select a{
+    float: right;
+    vertical-align: middle;
+}
+
+
+.margin5{
+	margin-bottom: 5px;
+}
+
+.margin20{
+	margin-bottom:20px;
+}
+
+.left{
+    float: left;
+    width: 30%;
+    height: 100%;
+    padding: 20px 3%;
+}
+
+.left h5{
+    font-weight: bold;
+    border: 1px solid  #90cfc4;
+    padding: 3px;
+    vertical-align: middle;
+    background-color:  #90cfc4;
+    border-radius: 10px;
+}
+
+.left-img-group{
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.left-img-group a{
+    display: block;
+    width:95%;
+    height: 80%;
+    border: 1px solid;
+}
+
+.right{
+    float: right;
+    width: 67%;
+    height: 100%;
+    padding: 20px;
+}
+
+.right .column{
+    width: 100%;
+    height: 80px;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.forum-part{
+    border: 1px solid #f0f0f0;
+    padding: 10px 30px;
+
+}
+
+.forum-part li{
+    display: inline-block;
+    min-width: 300px;
+    padding: 5px;
+}
+
+.forum-part h1{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #90cfc4;
+    padding: 5px;
+    border-radius-topleft: 3px ;
+    vertical-align: middle;
+}
+
+.forum-part .a-image{
+    display: inline-block;
+    background: url("../img/icon-forum.png") no-repeat center center;
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 5px ;
+}
+
+#postDetailList{
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.post-detail-column{
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 2px;
+}
+
+#reply-column{
+	margin-top:10px;
+	width:100%;
+	height: 160px;
+	padding: 10px;
+    border: 1px solid #90cfc4;
+    border-radius:10px;
+    overflow: hidden;
+}
+
+#footer{
+    height: 120px;
+    text-align: center;
+    padding: 30px;
+}
+
+#footer a{
+    display: inline-block;
+    padding: 0 10px;
+    border-right: 1px solid;
+}
