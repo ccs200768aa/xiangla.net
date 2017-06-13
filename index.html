@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>湘辣乡腊</title>
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="resources/css/style.css"/>
+    <script>
+        function btnClick() {
+            var queryParams = "";
+            window.location.href = "eat/foodList" + queryParams;
+        }
+    </script>
+</head>
+<body>
+<div class="header">
+    <div class="top-index">
+        <div id="manage">
+            <ul>
+                <li><a href="<%=basePath%>index/managerLogin">I'm Manager</a></li>
+                <li><a href="<%=basePath%>index/userLogin">I'm User</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="logo"><a href="#"></a></div>
+        <div class="search_box">
+            <form action="#">
+                <input type="text" placeholder="全站搜索"/>
+                <input type="submit" class="btn btn-default" value="查询"/>
+            </form>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul class="nav-pills">
+                    <li><a href="WEB-INF/views/eat/foodList.html">吃</a></li>
+                    <li><a href="#">喝</a></li>
+                    <li><a href="#">玩</a></li>
+                    <li><a href="#">乐</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="eat">
+        <div class="container">
+            <div class="article">
+                <h1>吃</h1>
+
+                <p>今天吃喝不努力 明天努力找吃喝。</p>
+                <button class="btn btn-success" onclick="btnClick()">加入吃货帮</button>
+            </div>
+        </div>
+    </div>
+    <div class="drink">
+        <div class="container">
+            <div class="article">
+                <h1>喝</h1>
+
+                <p>你不能像大麻一样给我无尽的幻想，却总在我疲惫时给我欲罢不能的冲动，
+                    <br>
+                    在那一个个数不尽的午夜里伴我左右，我想我早已习惯了你的味道，
+                    <br>
+                    我的蓝山，生活因你而不同。如果有人敢说你是苦，我定把他投进地狱的深渊，
+                    <br>
+                    让他受尽万般折磨，直到他想起你的好，忆起你的甜。</p>
+                <button class="btn btn-danger">加入咖啡流</button>
+            </div>
+        </div>
+    </div>
+    <div class="play">
+        <div class="container">
+            <div class="article">
+                <h1>玩</h1>
+
+                <p>今天吃喝不努力 明天努力找吃喝。</p>
+                <button class="btn btn-primary"
+                        onclick="javascript: window.location.href='<%=basePath%>index/playIndex'">加入玩咖派
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="fun">
+        <div class="container">
+            <div class="article">
+                <h1>乐</h1>
+
+                <p>天天开心</p>
+                <button class="btn btn-warning" onclick="javascript: window.location.href='<%=basePath%>forum/index';">
+                    加入享乐组
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>Mr.Xiang &copy 伪版必究</p>
+</div>
+</body>
+</html>
