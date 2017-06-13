@@ -1,0 +1,101 @@
+<%@ page pageEncoding="UTF-8"%>
+<%@ include file="../include/top.jsp" %>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../resources/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../resources/css/play.css" />
+<title></title>
+</head>
+<body>
+	<div id="header">
+		<div id="logo"></div>
+		<div id="head-nav"></div>
+	</div>
+	<div id="banner"></div>
+	<!-- banner -->
+	<div id="content">
+		<div class="music">
+			<div class="part-right">
+				<h2>音乐广场</h2>
+				<p>中国风、摇滚、流行、爵士、</p>
+				<p>bigbang、周杰伦、陈奕迅、Mraroon5</p>
+				<button class="btn btn-success">进入音乐广场</button>
+			</div>
+		</div>
+		<div class="joke">
+			<h2>搞笑段子</h2>
+			<div class="joke-column">
+				<div class="joke-column-pre">
+					<span><a href="<%=basePath %>joke/jokeList">段子</a></span>
+				</div>
+				<div class="joke-column-hover"></div>
+			</div>
+			<div class="joke-column">
+				<div class="joke-column-pre">
+					<span>趣图</span>
+				</div>
+				<div class="joke-column-hover"></div>
+			</div>
+		</div>
+		<div class="game">
+			<div class="game-div">
+				<h2>流行游戏</h2>
+				<p>倘若A代表人生的成功，那么公式是：A=X+Y+Z。X是工作，Y是游戏，Z是保持缄默。</p>
+				<p>--爱因斯坦</p>
+				<button class="btn btn-info" onclick="window.location.href='<%=basePath %>game/index'">游戏乐园</button>
+			</div>
+
+		</div>
+		<div class="video">
+			<h2>热门视频</h2>
+			<ul>
+				<li>
+					<div class="col-sm-3 single-member effect">
+						<div class="video-image">
+							<img src="../resources/img/game.jpg" alt="" width="220px" height="300px" />
+						</div>
+						<div class="video-more-info">
+							<button></button>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="col-sm-3  single-member effect">
+						<div class="video-image">
+							<img src="../resources/img/game.jpg" alt="" width="220px" height="300px" />
+						</div>
+						<div class="video-more-info">
+							<button></button>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="col-sm-3  single-member effect">
+						<div class="video-image">
+							<img src="../resources/img/game.jpg" alt="" width="220px" height="300px" />
+						</div>
+						<div class="video-more-info">
+							<button></button>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="col-sm-3  single-member effect">
+						<div class="video-image">
+							<img src="../resources/img/game.jpg" alt="" width="220px" height="300px" />
+						</div>
+						<div class="video-more-info">
+							<button></button>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<p style="">XiangLa&copy版权所有</p>
+	</div>
+</body>
+</html>
