@@ -24,6 +24,10 @@ a:hover{
     border-bottom: 1px solid #eee;
 }
 
+body{
+    color: #878787;
+}
+
 .top-index{
 	width:100%;
 	height:40px;
@@ -192,6 +196,7 @@ a:hover{
 	/*width:230px;*/
 	height:310px;
 	border: 1px solid #ededed;
+    border-radius: 10px;
 	text-align: justify;
 }
 
@@ -205,7 +210,7 @@ a:hover{
 }
 
 #goods_ul li{
-    width: 17.2%;
+    width: 28%;
     display: inline-block;
     margin-right: 30px;
 }
@@ -432,9 +437,34 @@ a:hover{
 	height:100%;
 }
 
+#item_info .detail-img{
+    width:100%;height:300px;
+    border: 1px solid #EDEDED;
+    border-radius: 10px;
+}
+
 #item_info_detail{
 	width: 100%;
 	height:auto;
 	min-height:500px;
 	padding: 30px 0;
+}
+
+#info_tab{
+    margin-top: 10px;
+    border: 1px solid #EDEDED;
+    border-radius: 3px;
+    min-height: 90px;
+    padding: 20px 50px;
+    color: #878787;
+}
+
+#detail_tab{
+    padding: 20px 10px;
+}
+
+.goods-comment{
+    min-height: 50px;
+    padding: 10px;
+    border-bottom: 1px solid #e3e3e3;
 }

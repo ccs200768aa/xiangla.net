@@ -2,9 +2,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>XiangLaXiangLa</title>
-    <link rel="stylesheet" href="../../../resources/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../../../resources/css/style.css"/>
-    <script type="text/javascript" src="../../../resources/js/jquery-3.0.0.min.js"></script>
+    <link rel="stylesheet" href="../../../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../../static/css/style.css"/>
+    <script type="text/javascript" src="../../../static/js/jquery-3.0.0.min.js"></script>
 </head>
 <body>
 <div class="header">
@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="logo"><a href="#"></a></div>
+        <div class="logo"><a href="../../../index.html"></a></div>
         <div class="search_box">
             <form action="#">
                 <input type="text" placeholder="全站搜索"/>
@@ -27,7 +27,7 @@
         <div class="navbar">
             <nav>
                 <ul class="nav-pills">
-                    <li><a href="resources/views/eatList.jsp">吃</a></li>
+                    <li><a href="foodList.html">吃</a></li>
                     <li><a href="#">喝</a></li>
                     <li><a href="#">玩</a></li>
                     <li><a href="#">乐</a></li>
@@ -91,11 +91,11 @@
                 var goods = data.list;
                 $(goods).each(function () {
                     $("#goods_ul").append("<li><!--class='col-xs-3'-->" + "<div class='itemBox'>"
-                            + "<div class='goods_img'><a href='itemDetail.html?itemId="+this.id+"'><img src='" + this.imgUrl + "' style='width:100%;height:220px;border:none;' alt='未上传图片'/></a></div>"
+                            + "<div class='goods_img'><a href='itemDetail.html?itemId="+this.id+"'><img src='" + this.imgUrl + "' style='width:100%;height:220px;border:none;border-radius:10px' alt='未上传图片'/></a></div>"
                             + "<div class='goods_info'>"
                             + "<span style='color:#FF9933;font-size:16px;font-weight: bold'>￥" + this.sellprice + "</span><br/><span style='font-size:12px;height: 35px;line-height: 35px'>" + this.name + "</span><br/>"
-                            + "<a href='#' id='list' onclick='list("+this.id+")'><img src='../../../resources/img/basket.png' style='width:20px;height:20px;float:right;margin-right:10px;'/></a>"
-                            + "<a href='#' id='dz'><img src='../../../resources/img/good.png' style='width:20px;height:20px;float:right;margin-right:10px;'/></a></div>"
+                            + "<a href='#' id='list' onclick='list("+this.id+")'><img src='../../../static/img/basket.png' style='width:20px;height:20px;float:right;margin-right:10px;'/></a>"
+                            + "<a href='#' id='dz'><img src='../../../static/img/good.png' style='width:20px;height:20px;float:right;margin-right:10px;'/></a></div>"
                             + "</div>"
                             + "</li>");
                 });

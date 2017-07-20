@@ -3,8 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>商品详情列表</title>
-    <link rel="stylesheet" href="../../../resources/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../resources/css/style.css">
+    <link rel="stylesheet" href="../../../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/style.css">
 
 </head>
 <body>
@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="logo"><a href="#"></a></div>
+        <div class="logo"><a href="../../../index.html"></a></div>
         <div class="search_box">
             <form action="#">
                 <input type="text" placeholder="全站搜索"/>
@@ -28,7 +28,7 @@
         <div class="navbar">
             <nav>
                 <ul class="nav-pills">
-                    <li><a href="resources/views/eatList.jsp">吃</a></li>
+                    <li><a href="foodList.html">吃</a></li>
                     <li><a href="#">喝</a></li>
                     <li><a href="#">玩</a></li>
                     <li><a href="#">乐</a></li>
@@ -40,7 +40,7 @@
 <div class="container">
     <div id="item_info">
         <div class="col-xs-4  info_image">
-            <img style="width:100%;height:300px;border: 1px solid #EDEDED " src="" alt="我是图片" id="food_img">
+            <img class='detail-img' src="" alt="我是图片" id="food_img">
         </div>
         <div class="col-xs-8 info_text">
             <div id="info_summery">
@@ -59,7 +59,7 @@
     <div id="item_info_detail">
         <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#detail">商品详情</a></li>
-            <li><a data-toggle="tab" href="#ask">商品咨询</a></li>
+            <!--<li><a data-toggle="tab" href="#ask">商品咨询</a></li>-->
             <li><a data-toggle="tab" href="#comment">用户评价</a></li>
         </ul>
         <div class="tab-content">
@@ -67,7 +67,7 @@
                 <div id="info_tab"></div>
                 <div id="detail_tab"></div>
             </div>
-            <div class="tab-pane fade" id="ask"><h1>我是zixun</h1></div>
+            <!--<div class="tab-pane fade" id="ask"><h1>我是zixun</h1></div>-->
             <div class="tab-pane fade" id="comment">
                 <ul id="comment_list"></ul>
             </div>
@@ -77,8 +77,8 @@
 <div class="footer">
     <p>Mr.Xiang &copy 伪版必究</p>
 </div>
-<script src="../../../resources/js/jquery-3.0.0.min.js"></script>
-<script src="../../../resources/js/bootstrap.min.js"></script>
+<script src="../../../static/js/jquery-3.0.0.min.js"></script>
+<script src="../../../static/js/bootstrap.min.js"></script>
 <script>
     var src = window.location.href;
     var goodsId = src.substr(src.indexOf("?itemId=") + 8, src.length);
@@ -114,10 +114,10 @@
                         + "<hr/>";
                 $("#info_summery").html(info_summery);
                 var info_tab_html = "<ul>" +
-                        "<li><span>名称:</span>" + food.name + "</li>" +
-                        "<li><span>市场价:</span>" + food.marketprice + "</li>" +
-                        "<li><span>销售价:</span>" + food.sellprice + "</li>" +
-                        "</ul>"
+                        "<li class='col-xs-3'><span>名称:</span>" + food.name + "</li>" +
+                        "<li class='col-xs-3'><span>市场价:</span>" + food.marketprice + "</li>" +
+                        "<li class='col-xs-3'><span>销售价:</span>" + food.sellprice + "</li>" +
+                        "</ul><br/>"
                 $("#info_tab").html(info_tab_html);
                 $("#detail_tab").html(food.detail);
             }
@@ -137,8 +137,8 @@
             success: function (data) {
                 var gcList = data.gcList;
                 $(gcList).each(function(){
-                    $("#comment_list").append("<li>"+this['createTime']
-                    +this['content']
+                    $("#comment_list").append("<li class='goods-comment'> <span class='col-xs-8'>"+this['content']
+                    +"</span><span class='col-xs-2'>"+this['createTime'] +"</span><span class='col-xs-2'>用户名</span> "
                     +"</li>");
                 });
             }
