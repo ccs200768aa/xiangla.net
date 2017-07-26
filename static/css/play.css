@@ -68,7 +68,7 @@ background-size: 100%;}
 
 .music{
     width:auto;
-    height: 940px;
+    height: 740px;
     background: url("../img/music_bg.jpg") no-repeat left ;
     background-size: 100% 100%;
     position: relative;
@@ -101,12 +101,28 @@ background-size: 100%;}
     border-radius: 5px;
 }
 
+.joke-column a {
+    font-family: "hellokitty";
+    font-size: 22px;
+    color: black;
+}
+
+.joke-column:hover a {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
 .joke-column:hover{
     opacity: 0.5;
     box-shadow: 3px 3px #9ba1b7;
 }
 
-.joke-column:hover span{ font-size: 22px;font-weight: bold;}
+.joke-column:hover span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
 
 .game{
     width: 100%;
@@ -143,7 +159,16 @@ background-size: 100%;}
 }
 
 .video .video-more-info{height: 0; transition: 0.4s; overflow: hidden; z-index: 9; position: relative; background-color: #fff;opacity: 0.5}
-.video-more-info button{background: url("../img/play.png")no-repeat center center; width: 130px;height: 80px;display: block;background-size: 100% 100%}
+
+.video-more-info button {
+    position: absolute;
+    left: 65px;
+    background: url("../img/icon/play.ico") no-repeat center center;
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-size: 100% 100%
+}
 .video li:hover .video-more-info{height: 300px; transition: 0.4s;padding: 100px 38px;}
 
 .video li>a{

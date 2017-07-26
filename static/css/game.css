@@ -53,10 +53,16 @@ body{
 #nav{
     min-height: 78px;
     width: 100%;
-    background-color: #18110e;
+    background-color: #6ace92;
     padding: 10px;
     overflow: hidden;
 }
+
+.nav > li > a {
+    font-size: 22px;
+    color: #ffffff;
+}
+
 
 .logo{
     width: 100px;

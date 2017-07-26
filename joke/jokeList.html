@@ -1,47 +1,78 @@
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="../../../static/css/joke.css"/>
-	</head>
-	<body>
-		<%@ include file="include/header.jsp" %>
-		<div class="clearfix"></div>
-		<div id="content">
-			<div id="content-l">
-				<ul>
-					<c:forEach items="${jokeList}" var="joke"> 
-						<li>
-						<div>
-							<h2>标题</h2>
-							<p>${joke.content}</p>
-							<a href="#content">了解更多</a>
-						</div>
-						</li>
-					</c:forEach>
-				</ul>
-			</div>
-			<div id="content-r">
-				<div class="recommond">
-					<label class="label-head">热门推荐</label>
-					<div class="reco-list">
-						<h4>推荐标题</h4>
-						<img src="img/logo.png" alt="" />
-						<p>wsdasdad三大大声道撒推荐内dsad是哒是哒是哒是哒容</p>
-					</div>
-				</div>
-				<div class="label">
-					<label class="label-head">分类选择</label>
-					<br />
-					<label class="label-part">萌宠</label>
-					<label class="label-part">这个冬天不太冷</label>
-					<label class="label-part">洪荒之力就该这么用，对么</label>
-					
-				</div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		<%@ include file="include/footer.jsp" %>
-	</body>
-	
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script type="text/javascript" src="../static/js/jquery-3.0.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/joke.css"/>
+</head>
+<body>
+<div id="header">
+    <div id="logo"></div>
+    <ul id="nav">
+        <li><a href="jokeList.html"><span>笑话</span></a></li>
+        <li><a href="funPicList.html"><span>趣图</span></a></li>
+    </ul>
+</div>
+<div class="clearfix"></div>
+<div id="content">
+    <div id="content-l">
+        <ul id="joke-ul">
+
+        </ul>
+    </div>
+    <div id="content-r">
+        <div class="recommond">
+            <label class="label-head">热门推荐</label>
+
+            <div class="reco-list">
+                <h4>推荐标题</h4>
+                <img src="../static/img/logo.png" alt=""/>
+
+                <p>wsdasdad三大大声道撒推荐内dsad是哒是哒是哒是哒容</p>
+            </div>
+        </div>
+        <div class="label">
+            <label class="label-head">分类选择</label>
+            <br/>
+            <label class="label-part">萌宠</label>
+            <label class="label-part">这个冬天不太冷</label>
+            <label class="label-part">洪荒之力就该这么用，对么</label>
+
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div id="footer">
+    <p>XiangLa&copy;版权所有</p>
+</div>
+<script>
+    //    var prefix = "http://localhost:8990/XiangLa/";
+    var prefix = "http://www.xianglaxiangla.xin:8992/xiangLaManage/";
+    var listurl = prefix + "pipes/joke/jokeJsonList";
+
+
+    function loadJokesListJson() {
+        var para = {};
+        $.ajax({
+            url: listurl,
+            type: 'post',
+            data: para,
+            dataType: 'json',
+            crossDomain: true,
+            success: function (data) {
+                var list = data;
+                $(list).each(function () {
+                    $("#joke-ul").append("<li><div><h2>" + this.content.substr(0, 5) + "</h2><p>" + this.content + "</p><a href='#content'>了解更多</a></div></li>");
+                });
+            }
+        });
+    }
+
+    $(function () {
+        loadJokesListJson();
+    });
+
+</script>
+</body>
+
 </html>

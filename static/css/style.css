@@ -7,9 +7,11 @@
 }
 a{
     color: #8996b9;
+    text-decoration: none;
 }
 a:hover{
     color: #b97e7a;
+    text-decoration: none;
 }
 
 .clearfix{
@@ -27,6 +29,7 @@ a:hover{
 body{
     color: #878787;
 }
+
 
 .top-index{
 	width:100%;
@@ -111,17 +114,23 @@ body{
     background-color: #FF9933;
 }
 
+.content {
+    width: 60%;
+}
+
 .eat{
+    margin-top: 30px;
     width: auto;
-    height: 700px;
-    background-image: url("../img/eat.jpg");
+    border-radius: 20px;
+    height: 900px;
+    background: url("../img/eat.jpg") no-repeat;
     background-size: 100% 100%;
-    background-repeat: no-repeat;
     border: 1px solid #e3e3e3;
 }
 .eat .container{
-    margin-top: 150px;
+    margin-top: 650px;
     text-align: right;
+    color: #FFFFFF;
 }
 
 .article{
@@ -132,66 +141,135 @@ body{
 
 
 .drink{
-    margin-top: 10px;
+    margin-top: 30px;
+    border-radius: 20px;
     width: auto;
-    height: 700px;
-   background-image: url("../img/drink.jpg");
+    height: 1000px;
+    background: url("../img/drink.jpg") no-repeat;
     background-size: 100% 100%;
-    background-repeat: no-repeat;
     border: 1px solid #e3e3e3;
 }
 .drink .container{
-    margin-top: 150px;
+    margin-top: 350px;
     text-align: right;
     color: #FFFFFF;
 }
 .play{
     width: auto;
-    height: 700px;
-    background-image: url("../img/play.jpg");
+    height: 900px;
+    margin-top: 30px;
+    border-radius: 20px;
+    background: url("../img/play.jpg") no-repeat;
     background-size: 100% 100%;
-    background-repeat: no-repeat;
     border: 1px solid #e3e3e3;
 }
 .play .container{
-    margin-top: 300px;
+    margin-top: 450px;
     text-align: left;
     color: #FFF;
 }
 .fun{
     width: auto;
-    height: 650px;
-    background-image: url("../img/fun.jpg");
+    border-radius: 20px;
+    margin-top: 30px;
+    height: 900px;
+    background: url("../img/fun.jpg") no-repeat;
     background-size: 100% 100%;
-    background-repeat: no-repeat;
     border: 1px solid #e3e3e3;
 }
 .fun .container{
-    margin-top: 150px;
+    margin-top: 350px;
     text-align: right;
 }
 
 .list_content{
 	padding-top: 10px;
 	float:left;
+    min-height: 680px;
 } 
 
 .list_content li{
 	padding-top:18px;
 }
 
-#goods_type{
-    height: 100px;
-    border: 1px solid #ededed;
+#province {
+    padding: 10px 30px;
+    min-height: 80px;
+    border: 3px solid #FF9933;
+    border-radius: 10px;
     margin-top: 20px;
 }
 
-#goods_Sort{
-    height: 30px;
-    border: 1px solid #ededed;
-    margin-top: 20px;
+#province a {
+    color: #333333;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 7px;
+    cursor: pointer;
 }
 
+#province a:hover {
+    color: #FF9933;
+}
+
+#province span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#city {
+    display: none;
+    padding: 10px 30px;
+    min-height: 80px;
+    border: 3px solid #FF9933;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#city span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#city a {
+    color: #333333;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+
+#city a:hover {
+    color: #FF9933;
+}
+
+#goods_Sort {
+    height: 50px;
+    width: 90%;
+    border-right: 2px solid #FF9933;
+    border-left: 2px solid #FF9933;
+    border-bottom: 2px solid #FF9933;
+    padding: 10px 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#goods_Sort a {
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+    color: #333333;
+    width: 100px;
+    height: 100%;
+    background-color: #CCCCCC;
+    text-align: center;
+    padding-top: 4px;
+}
+
+#goods_Sort a:hover {
+    color: #FF9933;
+}
 .itemBox{
 	/*width:230px;*/
 	height:310px;
@@ -254,10 +332,10 @@ body{
 	background-image: url("../img/trolley.png");
 }
 
-.fixer{ display:inline;position:fixed; top:0px;_position:absolute;_top:e-xpression(documentElement.scrollTop+10 + "px")}
+/*.fixer{ display:inline;position:fixed; top:0px;_position:absolute;_top:e-xpression(documentElement.scrollTop+10 + "px")}*/
 
 .footer{
-	margin-top:10px;
+    margin-top: 30px;
     width: auto;
     height: 80px;
     background-color: #FF9933;
